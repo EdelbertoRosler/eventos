@@ -11,10 +11,6 @@ class Auth extends BaseController
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
 
-        // var_dump($email); echo "<br>";
-        // var_dump($password); echo "<br>";
-        
-
         $model = model(UserModel::class);
 
         $user = $model->where([
@@ -56,4 +52,12 @@ class Auth extends BaseController
 
         return redirect()->to('/');
     }
+
+    public function register()
+    {
+        return view('header') .
+            view('register') .
+            view('footer');
+    }
+
 }

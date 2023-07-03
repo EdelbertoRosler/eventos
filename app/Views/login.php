@@ -14,7 +14,10 @@
                         <input type="password" name="password" class="form-control" maxlength="6" id="InputForPassword">
                     </div>
                     <button type="submit" class="btn btn-primary">Login</button>
-                </form>
+                </form><br>
+                <p>
+                    <a href="<?=base_url().'register'?>">Register</a>
+                </p>
             </div>
         </div>
     </div>
