@@ -4,7 +4,7 @@
         <div class="row justify-content-md-center">
             <div class="col-6">
                 <h1>Register</h1>
-                <form action="<?=base_url().'register' ?>" method="post">
+                <form action=<?= base_url().'register/new'?> method="post">
                 
                 <div class="form-outline mb-4">
                     <label class="form-label" for="name">Name</label>
@@ -23,16 +23,20 @@
                 
                 <div class="form-outline mb-4">
                     <label class="form-label" for="password">Password</label>
-                    <input type="password" id="password" name="password" class="form-control" />
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Insira a senha"/>
                 </div>
                 
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="confirm-password">Repeat password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" class="form-control" />
+                    <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="Confirme a senha"/>
                 </div>
                 
                 <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
                 </form>
+                <p>
+                    <a href=<?= previous_url(); ?> class="btn btn-sm btn-outline-secondary">Voltar</a>
+                </p>
             </div>
         </div>
     </div>
+    <script src="<?php echo base_url('assets/js/register.js'); ?>"></script>
+

@@ -39,13 +39,6 @@ class Auth extends BaseController
         }
     }
 
-    public function dashboard()
-    {
-        return view('header') .
-            view('dashboard') .
-            view('footer');
-    }
-
     public function logout()
     {
         session()->destroy();
@@ -53,11 +46,6 @@ class Auth extends BaseController
         return redirect()->to('/');
     }
 
-    public function register()
-    {
-        return view('header') .
-            view('register') .
-            view('footer');
-    }
+    
 
 }
